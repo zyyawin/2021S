@@ -1,0 +1,11 @@
+<mapper namespace="user">
+    <!--sql的唯一标识：namespace:id来组成： statementId-->
+    <!--id为查询的标识-->
+    <select id="selectList" resultType="com.awin.pojo.User">
+        select * from user
+    </select>
+
+    <select id="selectOne" resultType="com.awin.pojo.User" paramerType="com.awin.pojo.user">
+        select * from user where id=#{id} and userName= #{username}
+    </select>
+</mapper>
